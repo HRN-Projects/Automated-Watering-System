@@ -1,0 +1,4 @@
+<resources>
+    <dimen name="width">400dp</dimen>
+    <dimen name="toolbar_pad_top">24dp</dimen>
+</resources>

@@ -1,0 +1,5 @@
+<root>
+  <item name='android.Manifest.permission MODIFY_PHONE_STATE'>
+    <annotation name='android.support.annotation.NonNull' />
+  </item>
+</root>

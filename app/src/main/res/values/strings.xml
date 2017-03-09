@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Material UI</string>
+    <string name="for30sec">Start for 30 seconds</string>
+    <string name="next">next</string>
+    <string name="title_activity_sub">Sub Activity (Activity 2)</string>
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

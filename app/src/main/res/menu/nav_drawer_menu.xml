@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/navDrawerLog"
+            android:icon="@drawable/licon"
+            android:title="Log book"
+            android:orderInCategory="100"/>
+
+        <item
+            android:id="@+id/navDrawerPWS"
+            android:icon="@drawable/ws_org"
+            android:title="Plant-wise suggestion"
+            android:orderInCategory="200"/>
+    </group>
+</menu>
