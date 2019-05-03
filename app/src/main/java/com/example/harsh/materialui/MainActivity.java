@@ -244,7 +244,7 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
 
         switch (id) {
             case R.id.action_settings: {
-                Toast.makeText(getApplicationContext(), "Starting for 30 seconds...", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Watering started for 30 seconds...", Toast.LENGTH_SHORT).show();
                 setFor30();
                 return true;
             }
@@ -285,26 +285,26 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
 
     // Function for sending SMS to the defined number
     public void SmsSender() {
-        String PhoneNo = "9617404935";
+        String PhoneNo = "96xxxxxxxx";
 
         if (Soe == true) {
             try {
                 myDB.execSQL("INSERT INTO aws_logbook (rowid, duraMin, duraSec, sTime) VALUES( null , "+ min + "," + sec + ",datetime());");
                 SmsManager smsManager = SmsManager.getDefault();
-                smsManager.sendTextMessage(PhoneNo, null, "This is START message.\n\t Time Set for :\n" + min + " minutes " + sec + " seconds.", null, null);
+                smsManager.sendTextMessage(PhoneNo, null, "Watering started.\n\t Time Set for :\n" + min + " minutes " + sec + " seconds.", null, null);
                 Toast.makeText(getApplicationContext(), "SMS Sent!", Toast.LENGTH_SHORT).show();
             } catch (Exception e) {
-                Toast.makeText(getApplicationContext(), "SMS faild, please try again later!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "SMS failed, please try again later!", Toast.LENGTH_SHORT).show();
                 e.printStackTrace();
             }
         } else {
             try {
                 SmsManager smsManager = SmsManager.getDefault();
-                smsManager.sendTextMessage(PhoneNo, null, "This is END message.", null, null);
+                smsManager.sendTextMessage(PhoneNo, null, "Watering Added.", null, null);
                 Toast.makeText(getApplicationContext(), "SMS Sent!", Toast.LENGTH_SHORT).show();
                 Soe = true;
             } catch (Exception e) {
-                Toast.makeText(getApplicationContext(), "SMS faild, please try again later!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "SMS failed, please try again later!", Toast.LENGTH_SHORT).show();
                 e.printStackTrace();
             }
         }
@@ -349,7 +349,7 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
 
                 // Intent for starting a call
                 Intent callIntent = new Intent(Intent.ACTION_CALL);
-                callIntent.setData(Uri.parse("tel:9617404935"));
+                callIntent.setData(Uri.parse("tel:96xxxxxxxx"));
                 if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
                     // TODO: Consider calling
                     //    ActivityCompat#requestPermissions
